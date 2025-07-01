@@ -22,6 +22,13 @@ BloodHound-CE-Desktop wraps the Bloodhound CE web interface in an Electron appli
 
 <br>
 
+## Screenshots
+
+#### Main Window
+![MainWindow](assets/screenshots/demo.png)
+
+<br>
+
 ## Installation and Setup
 
 ### General Setup (Linux, macOS, Windows)
