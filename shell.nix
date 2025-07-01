@@ -2,7 +2,7 @@
 
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    electron_36-bin             # Electron 36 binary distribution
+    electron_36-bin             # Electron 36.6.0 binary distribution
     nodePackages_latest.nodejs  # Latest Node.js version
     nodePackages_latest.npm     # npm for managing JavaScript dependencies
 

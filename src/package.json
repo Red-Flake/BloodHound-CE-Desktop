@@ -1,0 +1,56 @@
+{
+  "name": "bloodhound-ce-desktop",
+  "version": "1.0.0",
+  "description": "Electron wrapper for Bloodhound CE web interface",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox --disable-gpu-sandbox --enable-gpu-rasterization --enable-accelerated-2d-canvas --in-process-gpu --ignore-gpu-blacklist --enable-features=UseOzonePlatform --ozone-platform=wayland"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "keywords": [
+    "BloodHound",
+    "Graph",
+    "Active Directory",
+    "Azure",
+    "Security"
+  ],
+  "homepage": "https://github.com/Red-Flake/BloodHound-CE-Desktop",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/Red-Flake/BloodHound-CE-Desktop.git"
+  },
+  "bugs": "https://github.com/Red-Flake/BloodHound-CE-Desktop/issues",
+  "author": "Mag1cByt3s",
+  "license": "GPL-3.0",
+  "config": {
+    "bhce_server": {
+      "host": "localhost",
+      "port": "9090"
+    }
+  },
+  "devDependencies": {
+    "electron": "36.6.0"
+  },
+  "dependencies": {
+    "electron": "36.6.0"
+  },
+  "build": {
+    "appId": "com.redflake.bloodhound-ce-desktop",
+    "productName": "BloodHound-CE-Desktop",
+    "files": ["*"],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "linux": {
+      "icon": "assets/icon.svg"
+    },
+    "win": {
+      "icon": "assets/icon.svg"
+    },
+    "mac": {
+      "icon": "assets/icon.svg"
+    }
+  }
+}

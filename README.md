@@ -103,6 +103,27 @@ For NixOS users, a `shell.nix` file is provided to set up a development environm
 
 <br>
 
+<br>
+
+## Building instructions
+
+### Nix/NixOS
+
+1. **Enter the Nix Shell**:
+   ```bash
+   cd BloodHound-CE-Desktop
+   nix-shell
+   ```
+
+<br>
+
+2. **Build the package using nix**:
+   ```bash
+   nix-build
+   ```
+
+<br>
+
 ## Contributing
 
 Contributions are welcome! Submit pull requests or open issues on the GitHub repository.
