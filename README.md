@@ -111,5 +111,4 @@ Contributions are welcome! Submit pull requests or open issues on the GitHub rep
 
 ## License
 
-This project is licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for details.
-</xaiArtifact>
+This project is licensed under the GNU General Public License (GPL) v3.0. See the [LICENSE](LICENSE) file for details.
