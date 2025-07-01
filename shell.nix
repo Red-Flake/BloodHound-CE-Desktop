@@ -30,6 +30,9 @@ pkgs.mkShell {
     xorg.libxcb       # X11 client-side library
     xorg.libxkbfile   # X11 keyboard file handling
     libappindicator-gtk3 # Optional: for system tray support
+
+    wayland # for wayland support
+    wayland-protocols # for wayland support
   ];
 
   shellHook = ''

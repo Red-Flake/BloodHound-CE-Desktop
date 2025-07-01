@@ -4,7 +4,7 @@
   "description": "Electron wrapper for Bloodhound CE web interface",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron . --no-sandbox --disable-gpu-sandbox --in-process-gpu"
+    "start": "electron . --no-sandbox --disable-gpu-sandbox --in-process-gpu --enable-features=UseOzonePlatform --ozone-platform=wayland"
   },
   "author": "Mag1cByt3s",
   "license": "GPL-3.0"
