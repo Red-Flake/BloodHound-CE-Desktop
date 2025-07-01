@@ -1,10 +1,12 @@
 const { app, session, BrowserWindow } = require('electron');
+const path = require('path');
 
 function createWindow() {
   const ses = session.fromPartition('persist:name');
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
+    icon: path.join(__dirname, 'assets', 'icon.png'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -14,11 +16,6 @@ function createWindow() {
 
   win.loadURL('http://localhost:9090');
 }
-
-// Command-line switches can be set before the app is ready
-app.commandLine.appendSwitch('enable-gpu-rasterization'); // Enhances GPU rendering
-app.commandLine.appendSwitch('enable-accelerated-2d-canvas'); // Enhances GPU rendering
-app.commandLine.appendSwitch('ignore-gpu-blacklist');     // Forces GPU use
 
 // Wait for the app to be ready before configuring the session
 app.whenReady().then(() => {

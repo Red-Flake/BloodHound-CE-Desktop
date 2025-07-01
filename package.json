@@ -4,8 +4,25 @@
   "description": "Electron wrapper for Bloodhound CE web interface",
   "main": "src/main.js",
   "scripts": {
-    "start": "electron . --no-sandbox --disable-gpu-sandbox --in-process-gpu --ignore-gpu-blacklist --enable-features=UseOzonePlatform --ozone-platform=wayland"
+    "start": "electron . --no-sandbox --disable-gpu-sandbox --enable-gpu-rasterization --enable-accelerated-2d-canvas --in-process-gpu --ignore-gpu-blacklist --enable-features=UseOzonePlatform --ozone-platform=wayland"
   },
   "author": "Mag1cByt3s",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "build": {
+    "appId": "com.redflake.bloodhound-ce-desktop",
+    "productName": "BloodHound-CE-Desktop",
+    "files": ["src/*"],
+    "directories": {
+      "buildResources": "src/assets"
+    },
+    "linux": {
+      "icon": "src/assets/icon.svg"
+    },
+    "win": {
+      "icon": "src/assets/icon.svg"
+    },
+    "mac": {
+      "icon": "src/assets/icon.svg"
+    }
+  }
 }
