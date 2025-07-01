@@ -1,6 +1,13 @@
 const { app, session, BrowserWindow } = require('electron');
 const path = require('path');
 
+// Get bhce_host and bhce_port from package.json config
+const config = app.getAppPath();
+const packageJson = require(path.join(config, 'package.json'));
+const bhce_host = packageJson.config.bhce_server.host;
+const bhce_port = packageJson.config.bhce_server.port;
+const bhce_url = `http://${bhce_host}:${bhce_port}`;
+
 function createWindow() {
   const ses = session.fromPartition('persist:name');
   const win = new BrowserWindow({
@@ -14,7 +21,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL('http://localhost:9090');
+  win.loadURL(bhce_url);
 }
 
 // Wait for the app to be ready before configuring the session

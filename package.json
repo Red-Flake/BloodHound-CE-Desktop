@@ -8,6 +8,12 @@
   },
   "author": "Mag1cByt3s",
   "license": "GPL-3.0",
+  "config": {
+    "bhce_server": {
+      "host": "localhost",
+      "port": "9090"
+    }
+  },
   "build": {
     "appId": "com.redflake.bloodhound-ce-desktop",
     "productName": "BloodHound-CE-Desktop",
