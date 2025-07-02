@@ -128,6 +128,8 @@ For NixOS users, a `shell.nix` file is provided to set up a development environm
 
 By default, the application will connect to `http://localhost:9090`. However, you can override these settings using command-line arguments.
 
+<br>
+
 #### Running with Default Settings
 If you run the application without any arguments, it will use the default host and port:
 ```bash
@@ -135,6 +137,8 @@ bloodhound-ce-desktop
 ```
 
 This will connect to `http://localhost:9090`.
+
+<br>
 
 #### Running with Custom Host and Port
 
