@@ -10,9 +10,9 @@ buildNpmPackage rec {
   pname = "bloodhound-ce-desktop";
   version = "1.0.0";
 
-  src = ./src;
+  src = ./.;
 
-  npmDepsHash = "sha256-DaTIaluv96wdX9ui7n2LVnhdKjRIx35jAc0ZNLF/JPA="; # you will get an error about mismatching hash the first time. Just copy the hash here
+  npmDepsHash = "sha256-OLSCHY9xcznPo+JmDVma3J+h48TrSY1rgb1ScL86REc="; # you will get an error about mismatching hash the first time. Just copy the hash here
 
   # Useful for debugging, just run "nix-shell" and then "electron ."
   nativeBuildInputs = [
@@ -34,7 +34,7 @@ buildNpmPackage rec {
   # The path might differ, for instance in electron-forge you need build/main/main.js
   postInstall = ''
     makeWrapper ${electron_36-bin}/bin/electron $out/bin/${pname} \
-      --add-flags $out/lib/node_modules/${pname}/main.js
+      --add-flags $out/lib/node_modules/${pname}/src/main.js
   '';
 
 }

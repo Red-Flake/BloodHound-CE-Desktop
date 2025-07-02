@@ -25,7 +25,7 @@ BloodHound-CE-Desktop wraps the Bloodhound CE web interface in an Electron appli
 ## Screenshots
 
 #### Main Window
-![MainWindow](assets/screenshots/demo.png)
+![MainWindow](docs/assets/screenshots/demo.png)
 
 <br>
 
@@ -121,6 +121,33 @@ For NixOS users, a `shell.nix` file is provided to set up a development environm
    ```bash
    nix-build
    ```
+
+<br>
+
+## Usage
+
+By default, the application will connect to `http://localhost:9090`. However, you can override these settings using command-line arguments.
+
+#### Running with Default Settings
+If you run the application without any arguments, it will use the default host and port:
+```bash
+bloodhound-ce-desktop
+```
+
+This will connect to `http://localhost:9090`.
+
+#### Running with Custom Host and Port
+
+To run the BloodHound-CE-Desktop application with a custom host, port, you can use the following command-line options to customize the host and port settings.
+
+To specify a custom host and port, use the `--host` and `--port` flags. For example:
+```bash
+bloodhound-ce-desktop --host=example.com --port=8080
+```
+
+This command will launch the application and connect to `http://example.com:8080` instead of the default URL.
+
+This flexibility allows you to easily switch between different environments or configurations without modifying the application code.
 
 <br>
 
