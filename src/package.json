@@ -6,6 +6,10 @@
   "scripts": {
     "start": "electron . --no-sandbox --disable-gpu-sandbox --enable-gpu-rasterization --enable-accelerated-2d-canvas --in-process-gpu --ignore-gpu-blacklist --enable-features=UseOzonePlatform --ozone-platform=wayland"
   },
+  "files": [
+    "src/main.js",
+    "src/assets/*"
+  ],
   "engines": {
     "node": ">=24"
   },
